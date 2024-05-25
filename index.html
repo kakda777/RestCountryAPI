@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries API</title>
+    <link rel="stylesheet" href="css/cssStyle.css">    
+</head>
+<body>
+    <div class="container">
+
+        <!--TItle-->
+        <h1>REST Countries API Assignment of <label>Techbodia Solution Cambodia</label></h1>
+        <!--End TItle-->
+
+        <!-- block filter and search-->
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search for countries..">            
+            <select id="sortSelect">
+                <option value="asc">Sort by (Ascending)</option>
+                <option value="desc">Sort by (Descending)</option>
+            </select>
+        </div>
+        <!--End block filter and search-->
+
+        <!--Container Bady-->
+        <table id="countriesTable">            
+            <thead>
+                <tr>
+                    <th>Flags </th>
+                    <th>Country Name</th>
+                    <th>2 character Country Code</th>
+                    <th>3 character Country Code</th>
+                    <th>Native Country Name</th>
+                    <th>Country Calling Codes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sorted countries inserted here -->
+            </tbody>
+        </table>
+        <!--Paggiatino-->
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageNumber">Page 1</span>
+            <button id="nextPage">Next</button>
+        </div>
+        <!--End Paggiatino-->
+        <!--End Container Bady-->
+        
+        <!-- The Popup Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="content_detail_popup">
+                    <span class="close">&times;</span>
+                    <h2 id="modalCountryName"></h2>
+                    <div id="modalCountryDetails"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Popup Modal -->
+
+        <label>Develop By: </label> Keng KAKDA
+
+    </div>
+    <script src="js/restCountryApi.js"></script>
+</body>
+</html>
