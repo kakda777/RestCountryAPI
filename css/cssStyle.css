@@ -92,6 +92,7 @@ body {
     width: 100%;
     min-height: 600px;
     height: 100%;
+    border-radius: 5px;
 }
 .close {
     color: #aaa;
@@ -117,8 +118,10 @@ label{
 }
 #countriesTable img{
     width: 150px;
-    box-shadow: 1px 1px 6px -3px var(--shadowColor);
+    box-shadow: 2px 2px 6px -3px var(--shadowColor);
     height: 80px;
+    border: 3px solid #fff;
+    border-radius: 3px;
 }
 
 select{
@@ -151,7 +154,9 @@ select{
     height: auto;
     max-width: 500px;   
     width: 100%;   
-    box-shadow: 1px 1px 6px -3px var(--shadowColor);
+    box-shadow: 2px 2px 6px -3px var(--shadowColor);
+    border: 7px solid #fff;
+    border-radius: 3px;
     
 }
 .modal-content #modalCountryName {
