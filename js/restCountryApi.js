@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalCountryName = document.getElementById('modalCountryName');
     const modalCountryDetails = document.getElementById('modalCountryDetails');
     const closeModal = document.getElementsByClassName('close')[0];
+    const clearButton = document.getElementById('clearSearch');
 
     let countries = [];
     let currentPage = 1;
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTable();
         })
         .catch(error => console.error('Error fetching data:', error));
-
+    
     // Render table
     function renderTable() {
         countriesTableBody.innerHTML = '';
@@ -105,14 +106,19 @@ document.addEventListener('DOMContentLoaded', () => {
         prevPageButton.disabled = currentPage === 1;
         nextPageButton.disabled = currentPage === totalPages;
     }
-
+    clearButton.addEventListener('click', () => {        
+        searchInput.value = '';
+        currentPage = 1;        
+        renderTable();
+    });
+    
     // Event listeners
     searchInput.addEventListener('input', () => {
-        currentPage = 1;
+        currentPage = 1;        
         renderTable();
     });
 
-    sortSelect.addEventListener('change', () => {
+    sortSelect.addEventListener('change', () => {        
         renderTable();
     });
 

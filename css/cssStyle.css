@@ -185,3 +185,25 @@ select{
 #modal-content img{
     padding: 0;
 }
+.controls .search{
+    float: right;
+    position: relative;
+    
+}
+.controls .search #clearSearch{
+    position: absolute;
+    bottom: 8px;
+    right: 9px;
+    background: none;
+    border: 1px solid #eee;
+    padding: 1px 8px 2px 8px;
+    cursor: pointer;
+    font-size: large;
+    border-radius: 13px;
+    color: #ccc;
+}
+
+.controls .search #clearSearch:hover{
+    border: 1px solid #d0d0d0;
+    color: #919191;
+}
